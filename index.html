@@ -455,7 +455,15 @@ section{padding:7rem 2rem;position:relative}
    SKILLS / BENTO
 ========================================= */
 #skills{background:var(--bg)}
-.bento{display:grid;grid-template-columns:repeat(3,1fr);gap:1.1rem;margin-top:3rem}
+/* .bento{display:grid;grid-template-columns:repeat(3,1fr);gap:1.1rem;margin-top:3rem} */
+.bento {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.1rem;
+  margin-top: 3rem;
+
+  grid-auto-rows: minmax(220px, auto); /* 🔥 IMPORTANT */
+}
 .bc{background:rgba(10,8,40,.8);border:1px solid var(--bd);border-radius:20px;
   padding:1.75rem;position:relative;overflow:hidden;
   backdrop-filter:blur(8px);
@@ -945,7 +953,7 @@ footer a:hover{text-decoration:underline}
   </div>
 </section>
 
-<!-- SKILLS -->
+<!-- SKILLS
 <section id="skills">
   <div class="sec-inner">
     <div class="rev" style="margin-bottom:0">
@@ -958,6 +966,137 @@ footer a:hover{text-decoration:underline}
       <div class="bc rw2 rev" id="bk2"><div class="bico">&#128452;&#xFE0F;</div><div class="bttl">Databases &amp; Caching</div><div class="bdsc">Relational DB design, query optimisation, Redis for caching, pub/sub and rate limiting.</div><div class="sbars" style="margin-top:.5rem"><div class="sbar"><div class="sbhd"><span class="sbn">PostgreSQL</span><span class="sbp">85%</span></div><div class="sbbg"><div class="sbf" data-p="85"></div></div></div><div class="sbar"><div class="sbhd"><span class="sbn">Redis</span><span class="sbp">80%</span></div><div class="sbbg"><div class="sbf" data-p="80"></div></div></div><div class="sbar"><div class="sbhd"><span class="sbn">MySQL</span><span class="sbp">75%</span></div><div class="sbbg"><div class="sbf" data-p="75"></div></div></div></div><div class="bpills" style="margin-top:.85rem"><span class="bp2">PostgreSQL</span><span class="bp2">Redis</span><span class="bp2">MySQL</span></div></div>
       <div class="bc sp2 rev" id="bk3"><div class="bico">&#9729;&#xFE0F;</div><div class="bttl">Cloud &amp; DevOps</div><div class="bdsc">AWS infrastructure management, containerised deployments, Nginx reverse-proxy and CI/CD pipelines.</div><div class="cpills"><span class="cp">&#9889; EC2</span><span class="cp">&#128230; S3</span><span class="cp">&#128274; IAM</span><span class="cp">&#127760; VPC</span><span class="cp">&#128202; CloudWatch</span><span class="cp">&#128051; Docker</span><span class="cp">&#127754; Nginx</span><span class="cp">&#128290; Git</span></div></div>
       <div class="bc rev" id="bk4"><div class="bico">&#128188;</div><div class="bttl">Experience</div><div class="bdsc">Roles spanning cloud infra, ERP, and production support.</div><div class="elist"><div class="eli"><div class="eli-d dp">&#x1F5A5;&#xFE0F;</div><div><div class="eli-t">.NET Full Stack Dev</div><div class="eli-s">AtFingerTip &middot; Dec 2025&ndash;Present</div></div></div><div class="eli"><div class="eli-d db">&#9729;&#xFE0F;</div><div><div class="eli-t">Cloud Engineer</div><div class="eli-s">Health Mudra &middot; 5 mos</div></div></div><div class="eli"><div class="eli-d db">&#128296;</div><div><div class="eli-t">Tech Support Eng.</div><div class="eli-s">Intouch CX &middot; 6 mos</div></div></div></div></div>
+    </div>
+  </div>
+</section> -->
+
+
+<!-- SKILLS -->
+<section id="skills">
+  <div class="sec-inner">
+    <div class="rev" style="margin-bottom:0">
+      <span class="sec-eye">// tech_stack</span>
+      <h2 class="sec-h">Tools &amp; <span class="grad">Technologies</span></h2>
+      <p class="sec-sub">Verified production stack — every skill has been used in real projects or professional roles.</p>
+    </div>
+
+    <div class="bento">
+
+      <!-- BACKEND -->
+      <div class="bc sp2 rev" id="bk1">
+        <div class="bico">⚙️</div>
+        <div class="bttl">Backend Engineering</div>
+        <div class="bdsc">Production REST APIs, real-time WebSocket systems, async task processing, and JWT auth flows.</div>
+
+        <div class="sbars">
+          <div class="sbar">
+            <div class="sbhd"><span class="sbn">Python</span><span class="sbp">90%</span></div>
+            <div class="sbbg"><div class="sbf" data-p="90"></div></div>
+          </div>
+
+          <div class="sbar">
+            <div class="sbhd"><span class="sbn">Django & DRF</span><span class="sbp">88%</span></div>
+            <div class="sbbg"><div class="sbf" data-p="88"></div></div>
+          </div>
+
+          <div class="sbar">
+            <div class="sbhd"><span class="sbn">Django Channels</span><span class="sbp">80%</span></div>
+            <div class="sbbg"><div class="sbf" data-p="80"></div></div>
+          </div>
+
+          <div class="sbar">
+            <div class="sbhd"><span class="sbn">Celery + Redis</span><span class="sbp">78%</span></div>
+            <div class="sbbg"><div class="sbf" data-p="78"></div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- DATABASE -->
+      <div class="bc rw2 rev" id="bk2">
+        <div class="bico">🗄️</div>
+        <div class="bttl">Databases & Caching</div>
+        <div class="bdsc">Relational DB design, query optimisation, Redis for caching, pub/sub and rate limiting.</div>
+
+        <div class="sbars">
+          <div class="sbar">
+            <div class="sbhd"><span class="sbn">PostgreSQL</span><span class="sbp">85%</span></div>
+            <div class="sbbg"><div class="sbf" data-p="85"></div></div>
+          </div>
+
+          <div class="sbar">
+            <div class="sbhd"><span class="sbn">Redis</span><span class="sbp">80%</span></div>
+            <div class="sbbg"><div class="sbf" data-p="80"></div></div>
+          </div>
+
+          <div class="sbar">
+            <div class="sbhd"><span class="sbn">MySQL</span><span class="sbp">75%</span></div>
+            <div class="sbbg"><div class="sbf" data-p="75"></div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CLOUD -->
+      <div class="bc sp2 rev" id="bk3">
+        <div class="bico">☁️</div>
+        <div class="bttl">Cloud & DevOps</div>
+        <div class="bdsc">AWS infrastructure management, containerised deployments, Nginx reverse-proxy and CI/CD pipelines.</div>
+
+        <div class="cpills">
+          <span class="cp">⚡ EC2</span>
+          <span class="cp">📦 S3</span>
+          <span class="cp">🔐 IAM</span>
+          <span class="cp">🌐 VPC</span>
+          <span class="cp">📊 CloudWatch</span>
+          <span class="cp">🐳 Docker</span>
+          <span class="cp">🌊 Nginx</span>
+          <span class="cp">🔗 Git</span>
+        </div>
+      </div>
+
+      <!-- EXPERIENCE SUMMARY -->
+      <div class="bc rw2 rev" id="bk4">
+        <div class="bico">💼</div>
+        <div class="bttl">Experience</div>
+        <div class="bdsc">Roles spanning cloud infra, ERP, and production support.</div>
+
+        <div class="elist">
+
+          <div class="eli">
+            <div class="eli-d dp">🖥️</div>
+            <div>
+              <div class="eli-t">.NET Full Stack Dev</div>
+              <div class="eli-s">AtFingerTip · Dec 2025–Present</div>
+            </div>
+          </div>
+
+          <div class="eli">
+            <div class="eli-d db">☁️</div>
+            <div>
+              <div class="eli-t">Cloud Engineer</div>
+              <div class="eli-s">Health Mudra · 5 mos</div>
+            </div>
+          </div>
+
+          <div class="eli">
+            <div class="eli-d db">🔧</div>
+            <div>
+              <div class="eli-t">Technical Support Engineer</div>
+              <div class="eli-s">Intouch CX · 6 mos</div>
+            </div>
+          </div>
+
+          <!-- ✅ WIPRO ADDED -->
+          <div class="eli">
+            <div class="eli-d db">☁️</div>
+            <div>
+              <div class="eli-t">Cloud Support Engineer</div>
+              <div class="eli-s">Wipro · 1+ Year</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
